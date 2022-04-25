@@ -1,6 +1,8 @@
 #!/bin/sh
 # ./ry.sh start 启动 stop 停止 restart 重启 status 状态
-AppName=ruoyi-admin.jar
+cd ~/project/RuoYi-Vue
+JAR_HOME=`pwd`/luna-admin/target
+AppName=luna-admin.jar
 
 # JVM参数
 JVM_OPTS="-Dname=$AppName  -Duser.timezone=Asia/Shanghai -Xms512m -Xmx1024m -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError -XX:+PrintGCDateStamps  -XX:+PrintGCDetails -XX:NewRatio=1 -XX:SurvivorRatio=30 -XX:+UseParallelGC -XX:+UseParallelOldGC"
@@ -26,7 +28,7 @@ function start()
 	if [ x"$PID" != x"" ]; then
 	    echo "$AppName is running..."
 	else
-		nohup java $JVM_OPTS -jar $AppName > /dev/null 2>&1 &
+		nohup java $JVM_OPTS -jar $JAR_HOME/$AppName > /dev/null 2>&1 &
 		echo "Start $AppName success..."
 	fi
 }

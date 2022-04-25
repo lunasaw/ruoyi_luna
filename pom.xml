@@ -4,16 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	
-    <groupId>com.ruoyi</groupId>
-    <artifactId>ruoyi</artifactId>
+    <groupId>com.luna</groupId>
+    <artifactId>luna</artifactId>
     <version>3.8.2</version>
 
-    <name>ruoyi</name>
-    <url>http://www.ruoyi.vip</url>
-    <description>若依管理系统</description>
+    <name>luna</name>
+    <url>http://www.luna.vip</url>
+    <description>LUNA MANAGER SYSTEM</description>
     
     <properties>
-        <ruoyi.version>3.8.2</ruoyi.version>
+        <luna.version>3.8.2</luna.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
@@ -29,8 +29,8 @@
         <jna.version>5.10.0</jna.version>
         <commons.io.version>2.11.0</commons.io.version>
         <commons.fileupload.version>1.4</commons.fileupload.version>
-        <commons.collections.version>3.2.2</commons.collections.version>
-        <poi.version>4.1.2</poi.version>
+        <commons.collections.version>4.3</commons.collections.version>
+        <poi.version>5.2.2</poi.version>
         <velocity.version>2.3</velocity.version>
         <jwt.version>0.9.1</jwt.version>
     </properties>
@@ -138,8 +138,8 @@
 
             <!-- collections工具类 -->
             <dependency>
-                <groupId>commons-collections</groupId>
-                <artifactId>commons-collections</artifactId>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
                 <version>${commons.collections.version}</version>
             </dependency>
 
@@ -166,49 +166,49 @@
 
             <!-- 定时任务-->
             <dependency>
-                <groupId>com.ruoyi</groupId>
-                <artifactId>ruoyi-quartz</artifactId>
-                <version>${ruoyi.version}</version>
+                <groupId>com.luna</groupId>
+                <artifactId>luna-quartz</artifactId>
+                <version>${luna.version}</version>
             </dependency>
 
             <!-- 代码生成-->
             <dependency>
-                <groupId>com.ruoyi</groupId>
-                <artifactId>ruoyi-generator</artifactId>
-                <version>${ruoyi.version}</version>
+                <groupId>com.luna</groupId>
+                <artifactId>luna-generator</artifactId>
+                <version>${luna.version}</version>
             </dependency>
 
             <!-- 核心模块-->
             <dependency>
-                <groupId>com.ruoyi</groupId>
-                <artifactId>ruoyi-framework</artifactId>
-                <version>${ruoyi.version}</version>
+                <groupId>com.luna</groupId>
+                <artifactId>luna-framework</artifactId>
+                <version>${luna.version}</version>
             </dependency>
 
             <!-- 系统模块-->
             <dependency>
-                <groupId>com.ruoyi</groupId>
-                <artifactId>ruoyi-system</artifactId>
-                <version>${ruoyi.version}</version>
+                <groupId>com.luna</groupId>
+                <artifactId>luna-system</artifactId>
+                <version>${luna.version}</version>
             </dependency>
 
             <!-- 通用工具-->
             <dependency>
-                <groupId>com.ruoyi</groupId>
-                <artifactId>ruoyi-common</artifactId>
-                <version>${ruoyi.version}</version>
+                <groupId>com.luna</groupId>
+                <artifactId>luna-common</artifactId>
+                <version>${luna.version}</version>
             </dependency>
 
         </dependencies>
     </dependencyManagement>
 
     <modules>
-        <module>ruoyi-admin</module>
-        <module>ruoyi-framework</module>
-        <module>ruoyi-system</module>
-        <module>ruoyi-quartz</module>
-        <module>ruoyi-generator</module>
-        <module>ruoyi-common</module>
+        <module>luna-admin</module>
+        <module>luna-framework</module>
+        <module>luna-system</module>
+        <module>luna-quartz</module>
+        <module>luna-generator</module>
+        <module>luna-common</module>
     </modules>
     <packaging>pom</packaging>
 
